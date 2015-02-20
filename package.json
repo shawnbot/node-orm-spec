@@ -1,0 +1,21 @@
+{
+  "name": "node-orm-spec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Shawn Allen <shawn.allen@gsa.gov>",
+  "license": "CC0",
+  "dependencies": {
+    "event-stream": "^3.2.2",
+    "moment": "^2.9.0",
+    "orm": "^2.1.22",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "sqlite3": "^3.0.5"
+  }
+}
