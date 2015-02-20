@@ -32,5 +32,20 @@ suite.connect('sqlite://test.db', function(error, db) {
 });
 ```
 
+## Streams
+Models created by a "suite" have a method for transforming objects in a stream:
+
+```js
+var Foo = db.models.Foo,
+    csv = require('fast-csv'),
+    fs = require('fs');
+
+fs.createReadStream('foo.csv')
+  .pipe(csv())
+  .pipe(Foo.createTransformStream())
+  .on('data', function(d, next) {
+    Foo.create(d, next);
+  });
+```
 
 [node-orm]: https://github.com/dresende/node-orm2
